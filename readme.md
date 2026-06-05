@@ -1,6 +1,8 @@
 # 🚀 Enterprise Agentic RAG System using LangGraph
 
-> Designing Intelligent AI Agents that Think, Decide, Retrieve, and Generate Responses Through Graph-Based Workflow Orchestration.
+<p align="center">
+<h3>Designing Intelligent AI Agents that Think, Decide, Retrieve, and Generate Responses Through Graph-Based Workflow Orchestration.</h3>
+</p>
 
 ---
 
@@ -303,6 +305,119 @@ Responsibilities:
 
 ---
 
+# ✨ Key Features
+
+- Agentic RAG Architecture
+- LangGraph State Management
+- Conditional Routing
+- Intelligent Retrieval Decisions
+- Semantic Search with FAISS
+- OpenAI LLM Integration
+- Context-Aware Responses
+- Multi-Step AI Workflows
+- Graph-Based Agent Design
+- Production-Oriented Agent Pipeline
+
+---
+
+# 📊 Core Components
+
+## Agent State
+
+The workflow maintains a shared state containing:
+
+- User Question
+- Retrieved Documents
+- Generated Answer
+- Retrieval Decision Flag
+
+This state is passed across all graph nodes.
+
+---
+
+## Conditional Edges
+
+LangGraph enables dynamic routing:
+
+```python
+workflow.add_conditional_edges(
+    "decide",
+    should_retrieve,
+    {
+        "retrieve": "retrieve",
+        "generate": "generate"
+    }
+)
+```
+
+The workflow path changes automatically based on the agent's decision.
+
+---
+
+## Retrieval System
+
+Implemented using:
+
+- OpenAI Embeddings
+- FAISS Vector Store
+- Similarity Search
+
+Capabilities:
+
+- Semantic Search
+- Context Retrieval
+- Knowledge Grounding
+
+---
+
+## Answer Generation
+
+The generation agent:
+
+- Receives user query
+- Consumes retrieved context
+- Produces grounded responses
+- Reduces hallucinations
+
+---
+
+# ⚙️ Installation
+
+```bash
+git clone https://github.com/Deepak-gogula03/AI-Agentic-RAG-LangGraph.git
+
+cd AI-Agentic-RAG-LangGraph
+
+pip install -r requirements.txt
+```
+
+---
+
+# 🔐 Environment Variables
+
+Create a `.env` file:
+
+```env
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+```
+
+---
+
+# ▶️ Run the Project
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```text
+agentic-rag.ipynb
+```
+
+Execute the notebook cells sequentially.
+
+---
 # 🎯 Skills Demonstrated
 
 ## Agentic AI
@@ -402,7 +517,7 @@ Potential enhancements include:
 # 📂 Project Structure
 
 ```text
-Enterprise-Agentic-RAG-System/
+AI-Agentic-RAG-LangGraph/
 │
 ├── notebooks/
 │   └── agentic-rag.ipynb
@@ -432,13 +547,3 @@ This project demonstrates practical expertise in:
 - Context-Aware AI Applications
 
 Beyond implementing a basic chatbot, the project showcases the design of an intelligent AI system capable of making decisions, retrieving knowledge, and generating grounded responses through graph-based orchestration.
-
----
-
-## 👨‍💻 Author
-
-Deepak Gogula
-
-Software Developer | AI Engineer | Generative AI Enthusiast
-
-Specializing in Agentic AI, LangGraph, LangChain, RAG Systems, Vector Databases, and LLM-Powered Applications.
